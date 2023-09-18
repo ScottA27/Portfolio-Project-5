@@ -53,3 +53,7 @@
     background-color: #b8ffba;
     border: none;
   }
+
+  .SignInAlert {
+    margin-top: 20px;
+  }
