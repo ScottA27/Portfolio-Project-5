@@ -54,11 +54,11 @@ function PostCreateForm() {
       event.preventDefault()
       const formData = new FormData();
 
-      formData.append('title', title)
-      formData.append('content', content)
-      formData.append('image', image)
-      formData.append('tags', tags)
-      formData.append('location', location)
+      formData.append('title', title);
+      formData.append('content', content);
+      formData.append('image', imageInput.current.files[0]);
+      formData.append('tags', tags);
+      formData.append('location', location);
 
       try {
         const {data} = await axiosReq.post('/posts/', formData);
@@ -118,7 +118,7 @@ function PostCreateForm() {
         ))}
       <Button
         className={`${btnStyles.Button} ${btnStyles.Bright}`}
-        onClick={() => {}}
+        onClick={() => history.goBack()}
       >
         cancel
       </Button>
