@@ -10,6 +10,18 @@
   h5 {
     margin: 0 0;
   }
+
+  .Heart {
+    color: #006004;
+  }
+  
+  .Heart:hover {
+    color: #006004;
+  }
+  
+  .HeartOutline:hover {
+    color: #006004;
+  }
   
   .profileLink:hover {
     color: #006004;
