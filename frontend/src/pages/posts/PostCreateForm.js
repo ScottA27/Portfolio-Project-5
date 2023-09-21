@@ -83,6 +83,11 @@ function PostCreateForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.title?.map((message, idx) => (
+        <Alert className={alertStyles.AlertGreen} variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
         <Form.Group>
           <Form.Label>Content</Form.Label>
           <Form.Control
