@@ -31,7 +31,7 @@ const Post = (props) => {
   const history = useHistory();
 
   const handleEdit = () => {
-    history.push(`/posts/${id}/edit`)
+    history.push(`/posts/${id}/edit`);
   };
 
   const handleDelete = async () => {
@@ -45,13 +45,13 @@ const Post = (props) => {
 
   const handleLike = async () => {
     try {
-      const {data} = await axiosRes.post("/likes/", { post: id });
+      const { data } = await axiosRes.post("/likes/", { post: id });
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
           return post.id === id
-          ? {...post, likes_count: post.likes_count + 1, like_id: data.id}
-          : post;
+            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+            : post;
         }),
       }));
     } catch (err) {
@@ -78,7 +78,7 @@ const Post = (props) => {
   return (
     <Card className={styles.Post}>
       <Card.Body>
-        <Media className="align-items-center justify-content-between" >
+        <Media className="align-items-center justify-content-between">
           <Link className={styles.profileLink} to={`/profiles/${profile_id}`}>
             <Avatar src={profile_image} height={55} />
             {owner}
@@ -86,10 +86,10 @@ const Post = (props) => {
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
             {is_owner && postPage && (
-            <MoreDropdown 
-            handleEdit={handleEdit}
-            handleDelete={handleDelete}
-            />
+              <MoreDropdown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
+              />
             )}
           </div>
         </Media>
@@ -100,7 +100,12 @@ const Post = (props) => {
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
-        {tags && <Card.Text className={styles.Tags}><i className="fal fa-hashtag"></i>{tags}</Card.Text>}
+        {tags && (
+          <Card.Text className={styles.Tags}>
+            <i className="fal fa-hashtag"></i>
+            {tags}
+          </Card.Text>
+        )}
         <div className={styles.PostBar}>
           {is_owner ? (
             <OverlayTrigger
@@ -132,9 +137,7 @@ const Post = (props) => {
           {comments_count}
         </div>
         <div className="d-flex align-items-center justify-content-end">
-          <span className={styles.smallText}>
-            {location}
-          </span>
+          <span className={styles.smallText}>{location}</span>
         </div>
       </Card.Body>
     </Card>

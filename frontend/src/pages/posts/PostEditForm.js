@@ -13,7 +13,10 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import alertStyles from "../../styles/PostCreateEditForm.module.css";
 
-import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
 function PostEditForm() {
@@ -38,7 +41,9 @@ function PostEditForm() {
         const { data } = await axiosReq.get(`/posts/${id}/`);
         const { title, content, image, tags, location, is_owner } = data;
 
-        is_owner ? setPostData({ title, content, image, tags, location }) : history.push("/");
+        is_owner
+          ? setPostData({ title, content, image, tags, location })
+          : history.push("/");
       } catch (err) {
         console.log(err);
       }
@@ -116,23 +121,23 @@ function PostEditForm() {
         />
       </Form.Group>
       <Form.Group>
-          <Form.Label>location</Form.Label>
-          <Form.Control
-            type="text"
-            name="location"
-            value={location}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Tags</Form.Label>
-          <Form.Control
-            type="text"
-            name="tags"
-            value={tags}
-            onChange={handleChange}
-          />
-        </Form.Group>
+        <Form.Label>location</Form.Label>
+        <Form.Control
+          type="text"
+          name="location"
+          value={location}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Tags</Form.Label>
+        <Form.Control
+          type="text"
+          name="tags"
+          value={tags}
+          onChange={handleChange}
+        />
+      </Form.Group>
       {errors?.tags?.map((message, idx) => (
         <Alert className={alertStyles.AlertGreen} variant="warning" key={idx}>
           {message}
@@ -145,7 +150,10 @@ function PostEditForm() {
       >
         cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Bright}`} type="submit">
+      <Button
+        className={`${btnStyles.Button} ${btnStyles.Bright}`}
+        type="submit"
+      >
         save
       </Button>
     </div>
@@ -179,7 +187,11 @@ function PostEditForm() {
               />
             </Form.Group>
             {errors?.image?.map((message, idx) => (
-              <Alert className={alertStyles.AlertGreen} variant="warning" key={idx}>
+              <Alert
+                className={alertStyles.AlertGreen}
+                variant="warning"
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
