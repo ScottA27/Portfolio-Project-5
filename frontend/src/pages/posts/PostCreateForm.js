@@ -19,115 +19,117 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
 function PostCreateForm() {
-    const [errors, setErrors] = useState({});
-  
-    const [postData, setPostData] = useState({
-      title: "",
-      content: "",
-      image: "",
-      tags: "",
-      location: "",
-    });
-    const { title, content, image, tags, location } = postData;
+  const [errors, setErrors] = useState({});
 
-    const imageInput = useRef(null);
-    const history = useHistory()
-  
-    const handleChange = (event) => {
+  const [postData, setPostData] = useState({
+    title: "",
+    content: "",
+    image: "",
+    tags: "",
+    location: "",
+  });
+  const { title, content, image, tags, location } = postData;
+
+  const imageInput = useRef(null);
+  const history = useHistory();
+
+  const handleChange = (event) => {
+    setPostData({
+      ...postData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleChangeImage = (event) => {
+    if (event.target.files.length) {
+      URL.revokeObjectURL(image);
       setPostData({
         ...postData,
-        [event.target.name]: event.target.value,
+        image: URL.createObjectURL(event.target.files[0]),
       });
-    };
-  
-    const handleChangeImage = (event) => {
-      if (event.target.files.length) {
-        URL.revokeObjectURL(image);
-        setPostData({
-          ...postData,
-          image: URL.createObjectURL(event.target.files[0]),
-        });
-      }
-    };
-
-    const handleSubmit = async (event) => {
-      event.preventDefault()
-      const formData = new FormData();
-
-      formData.append('title', title);
-      formData.append('content', content);
-      formData.append('image', imageInput.current.files[0]);
-      formData.append('tags', tags);
-      formData.append('location', location);
-
-      try {
-        const {data} = await axiosReq.post('/posts/', formData);
-        history.push(`/posts/${data.id}`)
-      } catch(err){
-        console.log(err)
-        if (err.response?.status !== 401){
-          setErrors(err.response?.data)
-        }
-      }
-      
     }
-  
-    const textFields = (
-      <div className="text-center">
-        <Form.Group>
-          <Form.Label>Title</Form.Label>
-          <Form.Control
-            type="text"
-            name="title"
-            value={title}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        {errors?.title?.map((message, idx) => (
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    formData.append("title", title);
+    formData.append("content", content);
+    formData.append("image", imageInput.current.files[0]);
+    formData.append("tags", tags);
+    formData.append("location", location);
+
+    try {
+      const { data } = await axiosReq.post("/posts/", formData);
+      history.push(`/posts/${data.id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  };
+
+  const textFields = (
+    <div className="text-center">
+      <Form.Group>
+        <Form.Label>Title</Form.Label>
+        <Form.Control
+          type="text"
+          name="title"
+          value={title}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.title?.map((message, idx) => (
         <Alert className={alertStyles.AlertGreen} variant="warning" key={idx}>
           {message}
         </Alert>
       ))}
-        <Form.Group>
-          <Form.Label>Content</Form.Label>
-          <Form.Control
-            as="textarea"
-            rows={6}
-            name="content"
-            value={content}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>location</Form.Label>
-          <Form.Control
-            type="text"
-            name="location"
-            value={location}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Tags</Form.Label>
-          <Form.Control
-            type="text"
-            name="tags"
-            value={tags}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        {errors?.tags?.map((message, idx) => (
-          <Alert className={alertStyles.AlertGreen} variant="warning" key={idx}>
-            {message}
-          </Alert>
-        ))}
+      <Form.Group>
+        <Form.Label>Content</Form.Label>
+        <Form.Control
+          as="textarea"
+          rows={6}
+          name="content"
+          value={content}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>location</Form.Label>
+        <Form.Control
+          type="text"
+          name="location"
+          value={location}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Tags</Form.Label>
+        <Form.Control
+          type="text"
+          name="tags"
+          value={tags}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.tags?.map((message, idx) => (
+        <Alert className={alertStyles.AlertGreen} variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
       <Button
         className={`${btnStyles.Button} ${btnStyles.Bright}`}
         onClick={() => history.goBack()}
       >
         cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Bright}`} type="submit">
+      <Button
+        className={`${btnStyles.Button} ${btnStyles.Bright}`}
+        type="submit"
+      >
         create
       </Button>
     </div>
@@ -175,7 +177,11 @@ function PostCreateForm() {
               />
             </Form.Group>
             {errors?.image?.map((message, idx) => (
-              <Alert className={alertStyles.AlertGreen} variant="warning" key={idx}>
+              <Alert
+                className={alertStyles.AlertGreen}
+                variant="warning"
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
