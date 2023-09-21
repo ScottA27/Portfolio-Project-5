@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"
+import axios from "axios";
 
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
@@ -30,8 +30,8 @@ function SignInForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const {data} = await axios.post("/dj-rest-auth/login/", signInData);
-      setCurrentUser(data.user)
+      const { data } = await axios.post("/dj-rest-auth/login/", signInData);
+      setCurrentUser(data.user);
       history.push("/");
     } catch (err) {
       setErrors(err.response?.data);
@@ -90,7 +90,11 @@ function SignInForm() {
               Sign in
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className={[styles.AlertGreen, styles.SignInAlert]}>
+              <Alert
+                key={idx}
+                variant="warning"
+                className={[styles.AlertGreen, styles.SignInAlert]}
+              >
                 {message}
               </Alert>
             ))}

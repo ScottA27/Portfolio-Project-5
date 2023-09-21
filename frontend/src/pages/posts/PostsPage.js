@@ -10,10 +10,10 @@ import Asset from "../../components/Asset";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min"; 
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
-import NoResults from "../../assets/no-results.jpg"
+import NoResults from "../../assets/no-results.jpg";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 
@@ -27,7 +27,7 @@ function PostsPage({ message, filter = "" }) {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const {data} = await axiosReq.get(`/posts/?${filter}search=${query}`);
+        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
@@ -37,10 +37,10 @@ function PostsPage({ message, filter = "" }) {
     setHasLoaded(false);
     const timer = setTimeout(() => {
       fetchPosts();
-    }, 1000)
+    }, 1000);
     return () => {
-      clearTimeout(timer)
-    }
+      clearTimeout(timer);
+    };
   }, [filter, query, pathname]);
 
   return (
@@ -49,30 +49,28 @@ function PostsPage({ message, filter = "" }) {
         <p>Popular profiles mobile</p>
         <i className={`fas fa-search ${styles.SearchIcon}`}></i>
         <Form
-        className={styles.SearchBar}
-        onSubmit={(event) => event.preventDefault()}
+          className={styles.SearchBar}
+          onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          type="text"
-          className="mr-sm-2"
-          placeholder="Search posts"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search posts"
           />
         </Form>
         {hasLoaded ? (
           <>
             {posts.results.length ? (
               <InfiniteScroll
-              children={
-                posts.results.map((post) => (
+                children={posts.results.map((post) => (
                   <Post key={post.id} {...post} setPosts={setPosts} />
-                ))
-              }
-              dataLength={posts.results.length}
-              loader={<Asset spinner />}
-              hasMore={!!posts.next}
-              next={() => fetchMoreData(posts, setPosts)}
+                ))}
+                dataLength={posts.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!posts.next}
+                next={() => fetchMoreData(posts, setPosts)}
               />
             ) : (
               <Container className={appStyles.Content}>
