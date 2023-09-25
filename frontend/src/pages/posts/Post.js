@@ -20,6 +20,8 @@ const Post = (props) => {
     content,
     image,
     tags,
+    team,
+    stadium,
     location,
     updated_at,
     postPage,
@@ -136,8 +138,10 @@ const Post = (props) => {
           </Link>
           {comments_count}
         </div>
-        <div className="d-flex align-items-center justify-content-end">
-          <span className={styles.smallText}>{location}</span>
+        <div className="mt-3 d-flex align-items-center justify-content-end">
+          <span className={styles.smallText}>
+            Posted From {team}'s stadium {stadium} in {location}
+          </span>
         </div>
       </Card.Body>
     </Card>

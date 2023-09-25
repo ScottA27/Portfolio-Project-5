@@ -27,9 +27,11 @@ function PostEditForm() {
     content: "",
     image: "",
     tags: "",
+    team: "",
+    stadium: "",
     location: "",
   });
-  const { title, content, image, tags, location } = postData;
+  const { title, content, image, tags, team, stadium, location } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -39,10 +41,27 @@ function PostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
-        const { title, content, image, tags, location, is_owner } = data;
+        const {
+          title,
+          content,
+          image,
+          tags,
+          team,
+          stadium,
+          location,
+          is_owner,
+        } = data;
 
         is_owner
-          ? setPostData({ title, content, image, tags, location })
+          ? setPostData({
+              title,
+              content,
+              image,
+              tags,
+              team,
+              stadium,
+              location,
+            })
           : history.push("/");
       } catch (err) {
         console.log(err);
@@ -76,6 +95,8 @@ function PostEditForm() {
     formData.append("title", title);
     formData.append("content", content);
     formData.append("tags", tags);
+    formData.append("team", team);
+    formData.append("stadium", stadium);
     formData.append("location", location);
 
     if (imageInput?.current?.files[0]) {
@@ -121,7 +142,25 @@ function PostEditForm() {
         />
       </Form.Group>
       <Form.Group>
-        <Form.Label>location</Form.Label>
+        <Form.Label>Team</Form.Label>
+        <Form.Control
+          type="text"
+          name="team"
+          value={team}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Stadium</Form.Label>
+        <Form.Control
+          type="text"
+          name="stadium"
+          value={stadium}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Country</Form.Label>
         <Form.Control
           type="text"
           name="location"

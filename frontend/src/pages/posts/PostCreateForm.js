@@ -28,9 +28,11 @@ function PostCreateForm() {
     content: "",
     image: "",
     tags: "",
+    team: "",
+    stadium: "",
     location: "",
   });
-  const { title, content, image, tags, location } = postData;
+  const { title, content, image, tags, team, stadium, location } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -60,6 +62,8 @@ function PostCreateForm() {
     formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
     formData.append("tags", tags);
+    formData.append("team", team);
+    formData.append("stadium", stadium);
     formData.append("location", location);
 
     try {
@@ -100,7 +104,25 @@ function PostCreateForm() {
         />
       </Form.Group>
       <Form.Group>
-        <Form.Label>location</Form.Label>
+        <Form.Label>Team</Form.Label>
+        <Form.Control
+          type="text"
+          name="team"
+          value={team}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Stadium</Form.Label>
+        <Form.Control
+          type="text"
+          name="stadium"
+          value={stadium}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Country</Form.Label>
         <Form.Control
           type="text"
           name="location"
