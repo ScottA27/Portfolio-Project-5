@@ -4,11 +4,14 @@ import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import alertStyles from "../../styles/Alert.module.css";
 
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const SignUpForm = () => {
+  useRedirect("loggedIn");
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
@@ -56,7 +59,11 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.username?.map((message, idx) => (
-              <Alert className={styles.AlertGreen} variant="warning" key={idx}>
+              <Alert
+                className={alertStyles.AlertGreen}
+                variant="warning"
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
@@ -73,7 +80,11 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.password1?.map((message, idx) => (
-              <Alert className={styles.AlertGreen} key={idx} variant="warning">
+              <Alert
+                className={alertStyles.AlertGreen}
+                key={idx}
+                variant="warning"
+              >
                 {message}
               </Alert>
             ))}
@@ -90,7 +101,11 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.password2?.map((message, idx) => (
-              <Alert className={styles.AlertGreen} key={idx} variant="warning">
+              <Alert
+                className={alertStyles.AlertGreen}
+                key={idx}
+                variant="warning"
+              >
                 {message}
               </Alert>
             ))}
@@ -102,7 +117,11 @@ const SignUpForm = () => {
               Sign up
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
-              <Alert className={styles.AlertGreen} key={idx} variant="warning">
+              <Alert
+                className={alertStyles.AlertGreen}
+                key={idx}
+                variant="warning"
+              >
                 {message}
               </Alert>
             ))}

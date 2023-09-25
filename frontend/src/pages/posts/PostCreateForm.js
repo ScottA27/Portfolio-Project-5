@@ -10,15 +10,17 @@ import Alert from "react-bootstrap/Alert";
 import Upload from "../../assets/upload_image.jpg";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
-import alertStyles from "../../styles/SignInUpForm.module.css";
+import alertStyles from "../../styles/Alert.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function PostCreateForm() {
+  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({

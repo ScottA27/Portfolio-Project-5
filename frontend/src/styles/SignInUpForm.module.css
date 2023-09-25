@@ -48,13 +48,3 @@
     height: 375px;
   }
 
-/* Alert Styles */
-.AlertGreen {
-  color: black;
-  background-color: #b8ffba;
-  border: none;
-}
-
-.SignInAlert {
-  margin-top: 20px;
-}

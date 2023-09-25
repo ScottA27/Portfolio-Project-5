@@ -11,7 +11,7 @@ import Image from "react-bootstrap/Image";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import alertStyles from "../../styles/PostCreateEditForm.module.css";
+import alertStyles from "../../styles/Alert.module.css";
 
 import {
   useHistory,
