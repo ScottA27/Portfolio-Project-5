@@ -16,9 +16,6 @@ class Post(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_post_qiqtax', blank=True
     )
-    image_filter = models.CharField(
-        max_length=32, choices=image_filter_choices, default='normal'
-    )
     tags = TaggableManager(blank=True)
     team = models.CharField(max_length=150, default="Unknown")
     stadium = models.CharField(max_length=150, default="Unknown")

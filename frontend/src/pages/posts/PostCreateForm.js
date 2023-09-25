@@ -1,24 +1,27 @@
+// React imports
 import React, { useRef, useState } from "react";
-
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+// Axios imports
+import { axiosReq } from "../../api/axiosDefaults";
+// Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
-
+import { Image } from "react-bootstrap";
+// Component imports
 import Upload from "../../assets/upload_image.jpg";
-
+import Asset from "../../components/Asset";
+import { useRedirect } from "../../hooks/useRedirect";
+// CSS imports
 import styles from "../../styles/PostCreateEditForm.module.css";
 import alertStyles from "../../styles/Alert.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import Asset from "../../components/Asset";
-import { Image } from "react-bootstrap";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosReq } from "../../api/axiosDefaults";
-import { useRedirect } from "../../hooks/useRedirect";
 
+// PostCreateForm allows users to create posts
 function PostCreateForm() {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});

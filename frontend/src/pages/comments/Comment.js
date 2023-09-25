@@ -1,12 +1,17 @@
+// React imports
 import React, { useState } from "react";
-import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+// Axios imports
+import { axiosRes } from "../../api/axiosDefaults";
+// Bootstrap imports
+import { Media } from "react-bootstrap";
+// Component imports
 import Avatar from "../../components/Avatar";
-import styles from "../../styles/Comment.module.css";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
+// CSS imports
+import styles from "../../styles/Comment.module.css";
 
 const Comment = (props) => {
   const {
@@ -24,6 +29,7 @@ const Comment = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
+  // handleDelete function to allow users to delete comments
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`);

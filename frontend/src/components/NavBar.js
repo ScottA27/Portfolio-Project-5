@@ -1,14 +1,19 @@
+// React imports
 import React from "react";
+import { NavLink } from "react-router-dom";
+// Axios imports
+import axios from "axios";
+// Bootstrap imports
 import { Navbar, Container, Nav } from "react-bootstrap";
+// CSS imports
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
-import { NavLink } from "react-router-dom";
+// Component imports
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
-import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { removeTokenTimestamp } from "../utils/utils";
 

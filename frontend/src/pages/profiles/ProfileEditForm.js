@@ -1,9 +1,12 @@
+// React imports
 import React, { useState, useEffect, useRef } from "react";
 import {
   useHistory,
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
-
+// Axios imports
+import { axiosReq } from "../../api/axiosDefaults";
+// Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
@@ -11,17 +14,17 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
-
-import { axiosReq } from "../../api/axiosDefaults";
+// Component imports
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
-
+// CSS imports
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import alertStyles from "../../styles/Alert.module.css";
 
+// ProfileEditForm function allows users to edit their own profile
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();

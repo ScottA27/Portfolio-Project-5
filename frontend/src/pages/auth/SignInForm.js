@@ -1,22 +1,25 @@
+// React imports
 import React, { useState } from "react";
+// Axios imports
 import axios from "axios";
-
+// Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
+// Component imports
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
-
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useRedirect } from "../../hooks/useRedirect";
+// CSS imports
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import alertStyles from "../../styles/Alert.module.css";
-import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
-import { useRedirect } from "../../hooks/useRedirect";
 
+// SignInForm function allows users to login
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
   useRedirect("loggedIn");

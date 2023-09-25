@@ -1,11 +1,16 @@
+// React imports
 import React from "react";
-import styles from "../../styles/Post.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import Avatar from "../../components/Avatar";
+// Axios imports
 import { axiosRes } from "../../api/axiosDefaults";
+// Bootstrap imports
+import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+// Component imports
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import Avatar from "../../components/Avatar";
 import { MoreDropdown } from "../../components/MoreDropdown";
+// CSS imports
+import styles from "../../styles/Post.module.css";
 
 const Post = (props) => {
   const {
@@ -36,6 +41,7 @@ const Post = (props) => {
     history.push(`/posts/${id}/edit`);
   };
 
+  // handleDelete function allows users to delete their own posts
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
@@ -45,6 +51,7 @@ const Post = (props) => {
     }
   };
 
+  // handleLike function allows users to like others posts
   const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
@@ -61,6 +68,7 @@ const Post = (props) => {
     }
   };
 
+  // handleUnlike function allows users to unlike posts they've liked
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/${like_id}/`);

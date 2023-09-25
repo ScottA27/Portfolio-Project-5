@@ -1,23 +1,26 @@
+// React imports
 import React, { useEffect, useState } from "react";
-
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
+// Axios imports
+import { axiosRes } from "../../api/axiosDefaults";
+// Bootstrap imports
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-
-import {
-  useHistory,
-  useParams,
-} from "react-router-dom/cjs/react-router-dom.min";
-import { axiosRes } from "../../api/axiosDefaults";
+// Component imports
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-
+// CSS imports
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import alertStyles from "../../styles/Alert.module.css";
 
+// UserPasswordForm function allows users to change their password
 const UserPasswordForm = () => {
   const history = useHistory();
   const { id } = useParams();

@@ -1,10 +1,15 @@
+// React imports
 import React from "react";
+// Bootstrap imports
 import { Container } from "react-bootstrap";
-import appStyles from "../../App.module.css";
+// Component imports
 import Asset from "../../components/Asset";
 import { useProfileData } from "../../contexts/ProfileDataContext";
 import Profile from "./Profile";
+// CSS imports
+import appStyles from "../../App.module.css";
 
+// PopularProfiles function allows users to see users with the most followers
 const PopularProfiles = ({ mobile }) => {
   const { popularProfiles } = useProfileData();
 

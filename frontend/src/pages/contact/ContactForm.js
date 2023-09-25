@@ -1,13 +1,18 @@
+// React imports
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+// Axios imports
+import { axiosReq } from "../../api/axiosDefaults";
+// Bootstrap imports
+import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
+// Component imports
+import { useRedirect } from "../../hooks/useRedirect";
+// CSS imports
 import styles from "../../styles/ContactForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import { useRedirect } from "../../hooks/useRedirect";
 
-import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
-import { axiosReq } from "../../api/axiosDefaults";
-
+// ContactForm allows users to contact the website owner
 const ContactForm = () => {
   useRedirect("loggedOut");
 

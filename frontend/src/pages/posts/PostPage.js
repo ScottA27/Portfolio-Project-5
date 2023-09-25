@@ -1,23 +1,25 @@
+// React imports
 import React, { useEffect, useState } from "react";
-
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+// Axios imports
+import { axiosReq } from "../../api/axiosDefaults";
+// Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
-import appStyles from "../../App.module.css";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosReq } from "../../api/axiosDefaults";
+// Component imports
 import Post from "./Post";
 import Comment from "../comments/Comment";
 import PopularProfiles from "../profiles/PopularProfiles";
-
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
+// CSS imports
+import appStyles from "../../App.module.css";
 
+// PostPage function allows users to view a specific post
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });

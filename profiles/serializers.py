@@ -26,7 +26,7 @@ class ProfileSerializer(serializers.ModelSerializer):
             ).first()
             return following.id if following else None
         return None
-            
+
     class Meta:
         model = Profile
         fields = [
@@ -34,4 +34,3 @@ class ProfileSerializer(serializers.ModelSerializer):
             'content', 'image', 'is_owner', 'following_id',
             'posts_count', 'followers_count', 'following_count',
         ]
-        

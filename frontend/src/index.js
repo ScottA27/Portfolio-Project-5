@@ -1,11 +1,14 @@
+// React imports
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom/cjs/react-router-dom.min";
 import ReactDOM from "react-dom";
-import "./index.css";
+// Component imports
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter as Router } from "react-router-dom/cjs/react-router-dom.min";
 import { CurrentUserProvider } from "./contexts/CurrentUserContext";
 import { ProfileDataProvider } from "./contexts/ProfileDataContext";
+// CSS imports
+import "./index.css";
 
 ReactDOM.render(
   <Router>

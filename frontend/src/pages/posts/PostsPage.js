@@ -1,24 +1,26 @@
+// React imports
 import React, { useEffect, useState } from "react";
-
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+// Axios imports
+import { axiosReq } from "../../api/axiosDefaults";
+// Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
+// Component imports
 import Post from "./Post";
 import Asset from "../../components/Asset";
-
-import appStyles from "../../App.module.css";
-import styles from "../../styles/PostsPage.module.css";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosReq } from "../../api/axiosDefaults";
-
 import NoResults from "../../assets/no-results.jpg";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+// CSS imports
+import appStyles from "../../App.module.css";
+import styles from "../../styles/PostsPage.module.css";
 
+// PostsPage function allows users to view a list of posts
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);

@@ -1,15 +1,19 @@
+// React imports
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-
+// Axios imports
+import axios from "axios";
+// Bootstrap imports
+import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
+// Component imports
+import { useRedirect } from "../../hooks/useRedirect";
+// CSS imports
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import alertStyles from "../../styles/Alert.module.css";
 
-import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
-import axios from "axios";
-import { useRedirect } from "../../hooks/useRedirect";
-
+// SignUpForm function allows users to create an account
 const SignUpForm = () => {
   useRedirect("loggedIn");
   const [signUpData, setSignUpData] = useState({

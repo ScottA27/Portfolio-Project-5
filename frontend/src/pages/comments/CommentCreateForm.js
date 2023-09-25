@@ -1,14 +1,18 @@
+// React imports
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+// Axios imports
+import { axiosRes } from "../../api/axiosDefaults";
+// Bootstrap imports
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-
+// Component imports
+import Avatar from "../../components/Avatar";
+// CSS imports
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import Avatar from "../../components/Avatar";
-import { axiosRes } from "../../api/axiosDefaults";
 
+// CommentCreateForm allows users to post comments on specific posts
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
