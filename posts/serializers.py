@@ -6,6 +6,9 @@ from taggit.serializers import (TagListSerializerField,
 
 
 class PostSerializer(TaggitSerializer, serializers.ModelSerializer):
+    """
+    Serializer for the Post model
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
