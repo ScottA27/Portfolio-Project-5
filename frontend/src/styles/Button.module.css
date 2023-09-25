@@ -41,22 +41,10 @@
 }
 
 .GreenOutline,
-.Green:hover {
-  /* border: 1px solid #006004; */
-  background-color: #006004;
-  color: #ffffff;
-}
-
-.Black,
-.BlackOutline:hover {
+.Button:active {
+  border: 1px solid #006004;
   background-color: #f8f8f8;
-  color: #f8f8f8;
-}
-
-.Black:hover,
-.BlackOutline {
-  background-color: #f8f8f8;
-  color: #f8f8f8;
+  color: #006004;
 }
 
 .Bright {
