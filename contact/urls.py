@@ -1,5 +1,5 @@
 from django.urls import path
-from contact import views
+from .views import ContactList
 
 urlpatterns = [
     path('contact/', ContactList.as_view()),

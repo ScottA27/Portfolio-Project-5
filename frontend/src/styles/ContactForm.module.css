@@ -1,0 +1,28 @@
+.Row {
+    height: calc(60vh - 81px);
+  }
+  .Input {
+    background: #ffffff;
+    border: 1px solid #f0f1f9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .Content {
+    color: #006004;
+    text-align: center;
+  }
+
+  .Header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #006004;
+  }
+  
