@@ -32,6 +32,8 @@ class PostList(generics.ListCreateAPIView):
         'title',
         'tags__name',
         'location',
+        'team',
+        'stadium',
     ]
     ordering_fields = [
         'likes_count',
