@@ -231,7 +231,17 @@ The font I decided to go with is 'PT Sans Narrow' with a backup font of 'sans-se
 
 ***
 
-## **Technologies Used**
+## Components
+
+There are several components created so they could be used throughout the project without repeating code. These are documented below:
+
+* Asset.js - used to render the loading spinner shown throughout the project.
+* Avatar.js - used to display users avatars.
+* MoreDropdown.js - used to render a dropdown menu with edit and delete buttons. Also used to render a dropdown menu with the edit profile, change username and change password buttons.
+* NavBar.js - used to render the navbar at the top of every page.
+* NotFound.js - used to render a message to the user that the page they're trying to access doesn't exist.
+
+## Technologies Used
 
 ### Languages
 
@@ -245,12 +255,10 @@ The font I decided to go with is 'PT Sans Narrow' with a backup font of 'sans-se
 * [Balsamiq](https://balsamiq.com/) - Used to create wireframes
 * [Github](https://github.com/) - Used to host the repository, store the commit history and manage the project board containing user stories
 * [GitPod](https://www.gitpod.io/) - Using GitPod terminal to commit to Git and push to GitHub
-* [Heroku](https://en.wikipedia.org/wiki/Heroku) - Used to deploy the live project
 * [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used to test site performance
 * [AmIResponsive](https://ui.dev/amiresponsive) - Used for responsiveness check across devices
 * [Favicon](https://favicon.io/) - Used to create the favicon
 * [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to debug and test responsiveness
-* [Cloudinary](https://cloudinary.com/) - A service that hosts image files in the project
 * [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
 * [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
 * [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code
@@ -259,7 +267,56 @@ The font I decided to go with is 'PT Sans Narrow' with a backup font of 'sans-se
 
 ## Database Schema
 
+![Database Schema](/images/pp5-dataschema.png)
+
+From the database schema above I made my models for the backend of the project which are:
+
+* User - created with standard django user model.
+* Profile - created when user signs up
+* Posts - to share an experience with other users
+* Likes - to indicate wether users like a post or not
+* Comments - allows users to voice their opinion on a post
+* Contact - allows users to contact the site owner
+
 ## **Technologies Used**
+
+### Languages
+
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the DRF backend framework
+
+### Frameworks & Software
+
+* [Django Rest Framework](https://www.django-rest-framework.org/) - A framework for building web API's
+* [PEP8 Validation](https://pypi.org/project/pep8/) - pep8 is a tool to check your Python code
+* [Heroku](https://en.wikipedia.org/wiki/Heroku) - Used to deploy the live project
+* [Cloudinary](https://cloudinary.com/) - A service that hosts image files in the project
+
+### Libraries
+
+The libraries used to create this project are documented below:
+
+* [asgiref](https://pypi.org/project/asgiref/)
+* [cloudinary](https://pypi.org/project/cloudinary/)
+* [dj-database-url](https://pypi.org/project/dj-database-url/0.5.0/)
+* [dj-rest-auth](https://pypi.org/project/dj-rest-auth/)
+* [Django](https://pypi.org/project/Django/)
+* [django-allauth](https://pypi.org/project/django-allauth/)
+* [django-cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/)
+* [django-cors-headers](https://pypi.org/project/django-cors-headers/)
+* [django-filter](https://pypi.org/project/django-filter/)
+* [django-taggit](https://pypi.org/project/django-taggit/)
+* [djangorestframework](https://pypi.org/project/djangorestframework/)
+* [djangorestframework-simplejwt](https://pypi.org/project/djangorestframework-simplejwt/)
+* [gunicorn](https://pypi.org/project/gunicorn/)
+* [oauthlib](https://pypi.org/project/oauthlib/)
+* [Pillow](https://pypi.org/project/Pillow/8.2.0/)
+* [psycopg2](https://pypi.org/project/psycopg2/)
+* [PyJWT](https://pypi.org/project/PyJWT/)
+* [python3-openid](https://pypi.org/project/python3-openid/)
+* [requests-oauthlib](https://pypi.org/project/requests-oauthlib/)
+* [sqlparse](https://pypi.org/project/sqlparse/)
+* [urllib3](https://pypi.org/project/urllib3/)
+* [whitenoise](https://pypi.org/project/whitenoise/)
 
 # **Features Left to Implement**
 
