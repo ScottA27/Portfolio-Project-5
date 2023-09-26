@@ -12,7 +12,7 @@ This sit was created for Portfolio Project #5 (Advanced Front End) - Diploma in 
 
 - [Project](<#project>)
     * [Objective](<#objective>)
-    * [Site Users Goal](<#site-users-goal>)
+    * [Site User's Goal](<#site-users-goal>)
     * [Project Management](<#project-management>)
 
 - [User Experience (UX)](<#user-experience-ux>)
@@ -75,11 +75,34 @@ All of the user stories were then placed onto my kanban board. The kanban board 
 
 ## Wireframes
 
+I created wireframes for my project using the software [Balsamiq](https://balsamiq.com). The wireframes have all been created as a desktop view as this is primarily made for browser. There is however full responsiveness for smaller screen sizes such as mobile and tablet. The layout of the pages are based on the CI Moments walkthrough as I admire the simplicity of it and how it adapts to smaller screens.
+
+<details><summary><b>Wireframes</b></summary>
+
+#### Home Page
+![Home Page](/images/pp5-homepage-wireframe.png)
+#### Create Post
+![Create Post](/images/pp5-createpost-wireframe.png)
+#### Profile Page
+![Profile Page](/images/pp5-profilepage-wireframe.png)
+#### Contact Us
+![Contact Us](/images/pp5-contactus-wireframe.png)
+
+</details><br/>
+
 ## Design Choices
 
 ### Colour Scheme 
 
+When I was designing my project I always wanted to keep things simple. I decided that the best way to do this was to have colours based on a football pitch, which is green and white. I thought dark greens throughout the project, implemented in buttons and nav links, where the best way to use the colour. There is also a slight grey background colour on the page. The alerts throughout the website are a lighter shade of green, pairing well with the lighter shades already on the page. The signup and signin pages also have orange implemented as it goes well with the green and white. Overall the colour palette is fairly simple but all the colours go together and very complimentary.
+
+![Colour Palette](/images/Colour-Palette.png)
+
 ### Typography
+
+The font I decided to go with is 'PT Sans Narrow' with a backup font of 'sans-serif' should the original not load. This font was picked as it is simple and elegant. It reads really easily but is on the lighter side to pair with the colour palette of the page.
+
+![Font](/images/pp5-font.png)
 
 # **Frontend**
 
