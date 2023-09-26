@@ -87,6 +87,10 @@ I created wireframes for my project using the software [Balsamiq](https://balsam
 ![Profile Page](/images/pp5-profilepage-wireframe.png)
 #### Contact Us
 ![Contact Us](/images/pp5-contactus-wireframe.png)
+#### Sign Up
+![Sign Up](/images/pp5-signup-wireframe.png)
+#### Sign In
+![Sign In](/images/pp5-signin-wireframe.png)
 
 </details><br/>
 
@@ -108,7 +112,148 @@ The font I decided to go with is 'PT Sans Narrow' with a backup font of 'sans-se
 
 ## Existing Features
 
+- #### **Home Page**
+  - This is the home page, all users logged in or not see this page and get to scroll through posts.
+
+<details>
+    <summary>Click to View Home Page</summary>
+
+  ![Home Page](/images/pp5-homepage.png)
+</details>
+
+***
+
+- #### **Profile Page**
+  - This is the profile page, where users can view a specific users profile with their stats, bio and posts.
+
+<details>
+    <summary>Click to View Profile Page</summary>
+
+  ![Profile Page](/images/pp5-profilepage.png)
+</details>
+
+***
+
+- #### **Create Post Page**
+  - This is the create post page, where logged in users can create their own posts.
+
+<details>
+    <summary>Click to View Create Post Page</summary>
+
+  ![Create Post Page](/images/pp5-createpost.png)
+</details>
+
+***
+
+- #### **Post Page**
+  - This is the post page, where users can view a specific post and the comments underneath it.
+
+<details>
+    <summary>Click to View Post Page</summary>
+
+  ![Post Page](/images/pp5-postpage.png)
+</details>
+
+***
+
+- #### **Edit Post Page**
+  - This is the edit post page, where logged in users can edit their own posts.
+
+<details>
+    <summary>Click to View Edit Post Page</summary>
+
+  ![Edit Post Page](/images/pp5-editpost.png)
+</details>
+
+***
+
+- #### **Comment Section**
+  - This is the comment section, viewed at the bottom of each post page. This allows logged in users to voice their opinion on specific posts.
+
+<details>
+    <summary>Click to View Comment Section</summary>
+
+  ![Comment Section](/images/pp5-commentsection.png)
+</details>
+
+***
+
+- #### **Edit Profile Page**
+  - This is the edit profile page, which allows logged in users to edit their own profile.
+
+<details>
+    <summary>Click to View Edit Profile Page</summary>
+
+  ![Edit Profile Page](/images/pp5-editprofile.png)
+</details>
+
+***
+
+- #### **Sign Up Page**
+  - This is the sign up page, this allows logged out users to create an account to get access to all features of the website.
+
+<details>
+    <summary>Click to View Sign Up Page</summary>
+
+  ![Sign Up Page](/images/pp5-signup.png)
+</details>
+
+***
+
+- #### **Sign In Page**
+  - This is the sign in page, this allows logged out users to sign in if they already have an account.
+
+<details>
+    <summary>Click to View Sign In Page</summary>
+
+  ![Sign In Page](/images/pp5-signin.png)
+</details>
+
+***
+
+- #### **Change Username Page**
+  - This is the change username page, which allows logged in users to change their own username.
+<details>
+    <summary>Click to View Change Username Page</summary>
+
+  ![Change Username Page](/images/pp5-changeusername.png)
+</details>
+
+***
+
+- #### **Change Password Page**
+  - This is the change username page, which allows logged in users to change their own password.
+<details>
+    <summary>Click to View Change Password Page</summary>
+
+  ![Change Password Page](/images/pp5-changepassword.png)
+</details>
+
+***
+
 ## **Technologies Used**
+
+### Languages
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
+* [React.js](https://en.wikipedia.org/wiki/React_(software)) - Provides the base for the frontend components
+
+### Frameworks & Software
+* [React Bootstrap](https://react-bootstrap.github.io/) - A CSS framework that helps build responsive sites
+* [Balsamiq](https://balsamiq.com/) - Used to create wireframes
+* [Github](https://github.com/) - Used to host the repository, store the commit history and manage the project board containing user stories
+* [GitPod](https://www.gitpod.io/) - Using GitPod terminal to commit to Git and push to GitHub
+* [Heroku](https://en.wikipedia.org/wiki/Heroku) - Used to deploy the live project
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used to test site performance
+* [AmIResponsive](https://ui.dev/amiresponsive) - Used for responsiveness check across devices
+* [Favicon](https://favicon.io/) - Used to create the favicon
+* [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to debug and test responsiveness
+* [Cloudinary](https://cloudinary.com/) - A service that hosts image files in the project
+* [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
+* [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
+* [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code
 
 # **Backend**
 
