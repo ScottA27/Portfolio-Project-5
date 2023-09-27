@@ -321,7 +321,19 @@ The libraries used to create this project are documented below:
 
 ### Frontend
 
+The deployed project has been passed through both the [W3C HTML Validator](https://validator.w3.org/) and the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
 
+#### W3C HTML Validator
+
+There were no errors found when the deployed project URL was passed into the validator. There were some different info messages trailing slashes in the head element, I tried to remove them but the same messages continue to come up when passed through the validator.
+
+![W3C HTML Validation](/images/pp5-w3HTML.png)
+
+#### W3C CSS Validator
+
+There were no errors found when the project URL was passed into the validator.
+
+![W3C CSS Validation](/images/pp5-w3cValidation.png)
 
 ### Backend
 
@@ -397,6 +409,10 @@ Here are all of the manual tests I carried out for both frontend and backend:
 ### Backend
 
 ## Lighthouse
+
+I used Chrome Developer Tools Lighthouse to test the applications Performance, Accessibility, Best Practices and SEO. The results are documented below:
+
+![Lighthouse](/images/pp5-lighthouse.png)
 
 ## Resolved Bugs
 
