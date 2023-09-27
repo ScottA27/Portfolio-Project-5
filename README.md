@@ -325,7 +325,13 @@ The libraries used to create this project are documented below:
 
 ## Manual Testing
 
+Here are all of the manual tests I carried out for both frontend and backend:
+
 ### Frontend
+
+| Status | **Authentication - User Logged Out**
+|:-------:|:--------|
+| &check; | 
 
 ### Backend
 
