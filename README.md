@@ -11,40 +11,41 @@ This sit was created for Portfolio Project #5 (Advanced Front End) - Diploma in 
 ## Table of Contents
 
 - [Project](<#project>)
-    * [Objective](<#objective>)
-    * [Site User's Goal](<#site-users-goal>)
-    * [Project Management](<#project-management>)
+  * [Objective](<#objective>)
+  * [Site User's Goal](<#site-users-goal>)
+  * [Project Management](<#project-management>)
 
 - [User Experience (UX)](<#user-experience-ux>)
     * [Wireframes](<#wireframes>)
     * [Design Choices](<#design-choices>)
 
-- [Frontend](#frontend)
-    - [Existing Features](#features)
-        * [Navigation](#navigation)
-        * [Authentication](#authentication)
-        * [Homepage](#homepage)
-        * [Feed](#feed)
-        * [Posts](#posts)
-        * [Create a Post](#create-a-post)
-        * [Post Detail Page](#Post-detail-page)
-        * [Profile Page](#profile-page)
-        * [Contact Us](#contact)
-        * [Reusable React Components](#reusable-react-components)
-    - [Technologies Used](<#technologies-used>)
-        * [Languages](<#languages>)
-        * [Frameworks & Software](<#frameworks--software>)
-        * [Libraries](<#libraries>)
+- [Database Schema](<#database-schema>)
 
-- [Backend](#backend)
-    - [Database Schema](<#database-schema>)
-    - [Technologies Used](<#technologies-used>)
-        * [Languages](<#languages>)
-        * [Frameworks & Software](<#frameworks--software>)
-        * [Libraries](<#libraries>)
+- [Existing Features](#features)
+  - [Frontend](#frontend)
+    * [Navigation](#navigation)
+    * [Authentication](#authentication)
+    * [Homepage](#homepage)
+    * [Feed](#feed)
+    * [Posts](#posts)
+    * [Create a Post](#create-a-post)
+    * [Post Detail Page](#Post-detail-page)
+    * [Profile Page](#profile-page)
+    * [Contact Us](#contact)
+    * [Reusable React Components](#reusable-react-components)
 
+- [Technologies Used](<#technologies-used>)
+  * [Languages](<#languages>)
+  * [Frameworks & Software](<#frameworks--software>)
+  * [Libraries](<#libraries>)
+
+- [Testing](<#Testing>)
+  * [Code Validation](<#code-validation>)
+  * [Manual Testing](<#manual-testing>)
+  * [Lighthouse](<#lighthouse>)
+  * [Resolved Bugs](<#resolved-bugs>)
+  * [Unresolved Bugs](<#unresolved-bugs>)
 - [Features Left To Implement](<#features-left-to-implement>)
-- [Testing](#testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
 
@@ -108,9 +109,22 @@ The font I decided to go with is 'PT Sans Narrow' with a backup font of 'sans-se
 
 ![Font](/images/pp5-font.png)
 
-# **Frontend**
+# **Database Schema**
 
-## Existing Features
+![Database Schema](/images/pp5-dataschema.png)
+
+From the database schema above I made my models for the backend of the project which are:
+
+* User - created with standard django user model.
+* Profile - created when user signs up
+* Posts - to share an experience with other users
+* Likes - to indicate wether users like a post or not
+* Comments - allows users to voice their opinion on a post
+* Contact - allows users to contact the site owner
+
+# **Existing Features**
+
+## Frontend
 
 - #### **Home Page**
   - This is the home page, all users logged in or not see this page and get to scroll through posts.
@@ -249,8 +263,12 @@ There are several components created so they could be used throughout the projec
 * [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
 * [React.js](https://en.wikipedia.org/wiki/React_(software)) - Provides the base for the frontend components
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the DRF backend framework
 
 ### Frameworks & Software
+
+#### Frontend
+
 * [React Bootstrap](https://react-bootstrap.github.io/) - A CSS framework that helps build responsive sites
 * [Balsamiq](https://balsamiq.com/) - Used to create wireframes
 * [Github](https://github.com/) - Used to host the repository, store the commit history and manage the project board containing user stories
@@ -263,28 +281,7 @@ There are several components created so they could be used throughout the projec
 * [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
 * [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code
 
-# **Backend**
-
-## Database Schema
-
-![Database Schema](/images/pp5-dataschema.png)
-
-From the database schema above I made my models for the backend of the project which are:
-
-* User - created with standard django user model.
-* Profile - created when user signs up
-* Posts - to share an experience with other users
-* Likes - to indicate wether users like a post or not
-* Comments - allows users to voice their opinion on a post
-* Contact - allows users to contact the site owner
-
-## **Technologies Used**
-
-### Languages
-
-* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the DRF backend framework
-
-### Frameworks & Software
+#### Backend
 
 * [Django Rest Framework](https://www.django-rest-framework.org/) - A framework for building web API's
 * [PEP8 Validation](https://pypi.org/project/pep8/) - pep8 is a tool to check your Python code
@@ -318,9 +315,30 @@ The libraries used to create this project are documented below:
 * [urllib3](https://pypi.org/project/urllib3/)
 * [whitenoise](https://pypi.org/project/whitenoise/)
 
+# **Testing**
+
+## Code Validation
+
+### Frontend
+
+### Backend
+
+## Manual Testing
+
+### Frontend
+
+### Backend
+
+## Lighthouse
+
+## Resolved Bugs
+
+## Unresolved Bugs
+
 # **Features Left to Implement**
 
-# **Testing**
+* Bookmark - give logged in uers the ability to bookmark posts and have them all in the one place in a bookmarked page.
+* Messaging - give logged in users the ability to message other users. Allowing the community to be more connected and give it more of a social media feel.
 
 # **Deployment**
 
