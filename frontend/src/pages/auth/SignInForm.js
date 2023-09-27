@@ -1,5 +1,6 @@
 // React imports
 import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 // Axios imports
 import axios from "axios";
 // Bootstrap imports
@@ -10,7 +11,6 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 // Component imports
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
@@ -36,6 +36,7 @@ function SignInForm() {
   const history = useHistory();
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
@@ -45,6 +46,7 @@ function SignInForm() {
       setErrors(err.response?.data);
     }
   };
+
   const handleChange = (event) => {
     setSignInData({
       ...signInData,
