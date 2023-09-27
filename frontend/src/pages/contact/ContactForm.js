@@ -14,8 +14,6 @@ import appStyles from "../../App.module.css";
 
 // ContactForm allows users to contact the website owner
 const ContactForm = () => {
-  useRedirect("loggedOut");
-
   const [contactData, setContactData] = useState({
     name: "",
     last_name: "",

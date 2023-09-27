@@ -1,5 +1,5 @@
 // React imports
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 // Axios imports
 import "./api/axiosDefaults";
 // Bootstrap imports

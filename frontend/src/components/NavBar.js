@@ -1,6 +1,6 @@
 // React imports
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 // Axios imports
 import axios from "axios";
 // Bootstrap imports
@@ -15,7 +15,6 @@ import {
 } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
-import { removeTokenTimestamp } from "../utils/utils";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -27,7 +26,6 @@ const NavBar = () => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
-      removeTokenTimestamp();
     } catch (err) {
       console.log(err);
     }
