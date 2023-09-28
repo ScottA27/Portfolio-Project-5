@@ -11,6 +11,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 import styles from "../../styles/ContactForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import alertStyles from "../../styles/Alert.module.css";
 
 // ContactForm allows users to contact the website owner
 const ContactForm = () => {
@@ -63,7 +64,11 @@ const ContactForm = () => {
               />
             </Form.Group>
             {errors.name?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert
+                className={alertStyles.AlertGreen}
+                variant="warning"
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
@@ -78,7 +83,11 @@ const ContactForm = () => {
               />
             </Form.Group>
             {errors.last_name?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert
+                className={alertStyles.AlertGreen}
+                variant="warning"
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
@@ -93,7 +102,11 @@ const ContactForm = () => {
               />
             </Form.Group>
             {errors.email?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert
+                className={alertStyles.AlertGreen}
+                variant="warning"
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
@@ -107,8 +120,12 @@ const ContactForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-            {errors.email?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+            {errors.subject?.map((message, idx) => (
+              <Alert
+                className={alertStyles.AlertGreen}
+                variant="warning"
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
@@ -124,7 +141,11 @@ const ContactForm = () => {
               />
             </Form.Group>
             {errors.message?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert
+                className={alertStyles.AlertGreen}
+                variant="warning"
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
@@ -136,7 +157,12 @@ const ContactForm = () => {
               Submit
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="mt-3">
+              <Alert
+                className={alertStyles.AlertGreen}
+                key={idx}
+                variant="warning"
+                className="mt-3"
+              >
                 {message}
               </Alert>
             ))}
