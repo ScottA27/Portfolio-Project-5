@@ -612,7 +612,13 @@ I used Chrome Developer Tools Lighthouse to test the applications Performance, A
 
 ## Resolved Bugs
 
+- Links to sign in and sign up not working for logged out users when on any page other than the home page e.g post page, profile page - This problem was only happening in the deployed version of the project and not the local version. This was solved by changing my version of react router dom to the same version as Code Institute's moments walkthrough. I was using a different version so I tried changing it to the same one but it still didn't work. After that I tried to implement the access refresh tokens back into my project to see if that would fix the problem. That didn't seem to work until I updated my staticfiles by running the command "npm run build && rm -rf ../staticfiles/build && mv build ../staticfiles/.". I checked the deployed code once more and this fixed the issue I was having.
+
+- Cannot read properties of undefined (username) - This error was being thrown when a user tried to login. It would log the user in on refresh but everytime this error message would pop up. After struggling to find the reason why this was happening I realised I had added in access refresh tokens to my pages. When I commented them out of the pages the error suddenly went away so I knew this was the source of the problem. I tried to follow the walkthrough guide again on how to add the tokens into the project several times and it seems I was doing everything the exact same. I reached out to my fellow students on slack but couldn't get help there either. I came to the conclusion that it was better to take out the access refresh tokens from all my pages as it was working perfect before, so that's how I resolved it. My theory on why this wasn't working as expected is that I possibly have different versions of packages in my project to the walkthrough project and this is causing some sort of break in the code.
+
 ## Unresolved Bugs
+
+No unresolved bugs have been identified at this moment in time.
 
 # **Features Left to Implement**
 
@@ -620,5 +626,42 @@ I used Chrome Developer Tools Lighthouse to test the applications Performance, A
 * Messaging - give logged in users the ability to message other users. Allowing the community to be more connected and give it more of a social media feel.
 
 # **Deployment**
+
+The steps taken to deploy this project are documented below:
+
+* In package.json file, in the “scripts” section, add the following prebuild command "heroku-prebuild": "npm install -g serve", this will install a package needed to serve our single page application on Heroku.
+
+* Collect the admin and DRF staticfiles to the empty staticfiles directory with the following command in the terminal - python3 manage.py collectstatic
+
+* Then run the command to compile and move the React files - npm run build && mv build ../staticfiles/.
+
+* You will need to re-run this command any time you want to deploy changes to the static files in your project, including the React code. To do this, you need to delete the existing build folder and rebuild it.
+This command will delete the old folder and replace it with the new one - npm run build && rm -rf ../staticfiles/build && mv build ../staticfiles/.
+
+* Create runtime.txt file and add the following line to the file - python-3.9.16
+
+* Ensure all running servers are terminated. In any running terminals press Ctrl+C.
+
+* In your env.py file, ensure that both the DEBUG and DEV environment variables are commented out.
+
+* Run the Django server, in the terminal type - python3 manage.py runserver
+
+* Open the preview on port 8000 to check that your application is running. The React server should not be running. This is a test to check that Django is serving the React static files.
+
+* Commit and push the changes.
+
+## Heroku Deployment
+
+The steps taken to deploy this project to Heroku are documented below:
+
+* In your Heroku account, select Create New App and give it a unique name.
+
+* Select a region depending on where you live.
+
+* Click the 'Deploy' tab and select GitHub as the deployment method, find the repository you want to link from GitHub and click 'Connect'.
+
+* Click 'Deploy Branch' to prompt Heroku to build the application.
+
+* Once Heroku is finished building the app you will see a 'Build Succeeded' message. Click 'Open app' to open your application in the browser.
 
 # **Credits**
