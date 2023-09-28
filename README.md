@@ -424,30 +424,182 @@ Here are all of the manual tests I carried out for both frontend and backend:
 | &check; | Clicking the navbar website logo loads the home page
 | &check; | Clicking the sign in button in the navbar loads the sign in page
 | &check; | Clicking the sign up button in the navbar loads the sign up page
-| &check; | Users can't see the 'logged-in' features in the navbar
+| &check; | Users can't see the 'logged-in' features in the navbar: add post, feed, liked, contact us, sign out and profile
 
 | Status | **Homepage - User Logged Out**
 |:-------:|:--------|
 | &check; | Users can view the most followed profiles
 | &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
-| &check; | Users can't see follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can't view follow/unfollow buttons next to profiles in most followed profiles
 | &check; | Users can use the search bar to find posts by searching the posts: title, tags, team, stadium, country and the username of the post creator
 | &check; | Users can view all posts
 | &check; | Users can view all post details in the post list: username, date, title, content, tags, likes, comments, team, stadium and country
 | &check; | Users can click the post creators profile and it will redirect them to the selected profiles page
 | &check; | Users can't click the like button on a post, it prompts the user to login
-| &check; | Users can click the comment button and it will redirect them to the post detail page
+| &check; | Users can click the comment button on a post and it will redirect them to the post detail page
 
 | Status | **Post Detail Page - User Logged Out**
 |:-------:|:--------|
 | &check; | Users can view the most followed profiles
 | &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
-| &check; | Users can't see follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can't view follow/unfollow buttons next to profiles in most followed profiles
 | &check; | Users can view all post details: username, date, title, content, tags, likes, comments, team, stadium and country
 | &check; | Users can click the post creators profile and it will redirect them to the selected profiles page
 | &check; | Users can't click the like button on a post, it prompts the user to login
 | &check; | Users can view the comment list
-| &check; | Users can't see the create comment form
+| &check; | Users can't view the create comment form
+
+| Status | **Profile Page - User Logged Out**
+|:-------:|:--------|
+| &check; | Users can view the most followed profiles
+| &check; | Users can view the profiles stats and avatar
+| &check; | Users can't view follow/unfollow button
+| &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
+| &check; | Users can't view follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can view all post details: username, date, title, content, tags, likes, comments, team, stadium and country
+| &check; | Users can't click the post creators profile because they're already on that page
+| &check; | Users can't click the like button on a post, it prompts the user to login
+| &check; | Users can click the comment button on a post and it will redirect them to the post detail page
+
+| Status | **Navigation - User Logged Out**
+|:-------:|:--------|
+| &check; | Users can see the 'logged-in' features in the navbar: add post, feed, liked, contact us, sign out and profile
+| &check; | Clicking the navbar website logo loads the home page
+| &check; | Clicking the add post button redirects users to the create post page
+| &check; | Clicking the home button redirects users to the home page
+| &check; | Clicking the feed button redirects users to the feed page
+| &check; | Clicking the liked button redirects users to the liked page
+| &check; | Clicking the contact us button redirects users to the contact us page
+| &check; | Clicking the sign out button redirects users to the home page and signs them out
+| &check; | Clicking the profile button redirects users to the profile page
+
+| Status | **Homepage - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the most followed profiles
+| &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
+| &check; | Users can view follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can use the search bar to find posts by searching the posts: title, tags, team, stadium, country and the username of the post creator
+| &check; | Users can view all posts
+| &check; | Users can view all post details in the post list: username, date, title, content, tags, likes, comments, team, stadium and country
+| &check; | Users can click the post creators profile and it will redirect them to the selected profiles page
+| &check; | Users can click the like button on a post, unless it's their own
+| &check; | Users can click the comment button on a post and it will redirect them to the post detail page
+
+| Status | **Post Detail Page - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the most followed profiles
+| &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
+| &check; | Users can see follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can view all post details: username, date, title, content, tags, likes, comments, team, stadium and country
+| &check; | Users can click the post creators profile and it will redirect them to the selected profiles page
+| &check; | Users can click the like button on a post, it prompts the user to login
+| &check; | If the user owns the post they can view the three dots dropdown menu in the top right corner of the post
+| &check; | If the user owns the post they can click the three dots dropdown menu in the top right corner of the post
+| &check; | If the user owns the post they can view the edit and delete post button once the three dots dropdown menu has been clicked
+| &check; | If the user owns the post they can click the edit post button and it will redirect them to the edit post page
+| &check; | If the user owns the post they can click the delete post button, it will redirect them to the home page and the post will be deleted
+| &check; | Users can view the comment list
+| &check; | Users can view the create comment form
+| &check; | Users can post a comment in the comment section
+| &check; | Users can view the three dots dropdown menu in the top right corner of their own comments
+| &check; | Users can click the three dots dropdown menu in the top right corner of their own comments
+| &check; | Users can view the edit and delete comment buttons once the three dots dropdown has been clicked
+| &check; | Users can delete their own comments from the comment section
+| &check; | Users can edit their own comments from the comment section
+| &check; | Users can click cancel to cancel they changes they have made to their comment
+| &check; | Users can click save to save they changes they have made to their comment
+
+| Status | **Profile Page - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the most followed profiles
+| &check; | Users can view the profiles stats and avatar
+| &check; | Users can view follow/unfollow button
+| &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
+| &check; | Users can view follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can view all post details: username, date, title, content, tags, likes, comments, team, stadium and country
+| &check; | Users can't click the post creators profile because they're already on that page
+| &check; | Users can click the like button on a post
+| &check; | Users can click the comment button on a post and it will redirect them to the post detail page
+
+| Status | **Users Profile Page - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the most followed profiles
+| &check; | Users can view the profiles stats and avatar
+| &check; | Users can view the three dots dropdown menu in the top right corner of their own profile
+| &check; | Users can click the three dots dropdown menu in the top right corner of their own profile
+| &check; | Users can view the edit profile, change username and change password buttons once the three dots dropdown has been clicked
+| &check; | Users can click the edit profile button and it will redirect them to the edit profile page
+| &check; | Users can click the change username button and it will redirect them to the change username page
+| &check; | Users can click the change password button and it will redirect them to the change password page
+| &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
+| &check; | Users can view follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can view all post details: username, date, title, content, tags, likes, comments, team, stadium and country
+| &check; | Users can't click the post creators profile because they're already on that page
+| &check; | Users can't click the like button on a post, prompted with 'You can't like your own post!'
+| &check; | Users can click the comment button on a post and it will redirect them to the post detail page
+
+| Status | **Edit Profile Page - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the populated form to edit their profile
+| &check; | Users can click the change image button to change their avatar
+| &check; | Users can add text to the bio text box
+| &check; | Users can click cancel to cancel they changes they have made
+| &check; | Users can click save to save they changes they have made
+
+| Status | **Create Post Page - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the empty forum used to create posts
+| &check; | Users can click the add image button to add an image
+| &check; | Users can click the change image button after an image has already been added, to change the image
+| &check; | Users can't submit the forum without an image
+| &check; | Users can't submit the forum without a title
+| &check; | Users can't submit the forum without tags
+
+| Status | **Edit Post Page - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the populated forum used to edit posts
+| &check; | Users can click the change image button to change the image
+| &check; | Users can't submit the forum without an image
+| &check; | Users can't submit the forum without a title
+| &check; | Users can't submit the forum without tags
+| &check; | Users can click cancel to cancel they changes they have made
+| &check; | Users can click save to save they changes they have made
+
+| Status | **Feed Page - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the posts from users they follow
+| &check; | Users can view the most followed profiles
+| &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
+| &check; | Users can view follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can use the search bar to find posts by searching the posts: title, tags, team, stadium, country and the username of the post creator
+| &check; | Users can view all posts
+| &check; | Users can view all post details in the post list: username, date, title, content, tags, likes, comments, team, stadium and country
+| &check; | Users can click the post creators profile and it will redirect them to the selected profiles page
+| &check; | Users can click the like button on a post
+| &check; | Users can click the comment button on a post and it will redirect them to the post detail page
+
+| Status | **Liked Page - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the posts they have liked
+| &check; | Users can view the most followed profiles
+| &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
+| &check; | Users can view follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can use the search bar to find posts by searching the posts: title, tags, team, stadium, country and the username of the post creator
+| &check; | Users can view all posts
+| &check; | Users can view all post details in the post list: username, date, title, content, tags, likes, comments, team, stadium and country
+| &check; | Users can click the post creators profile and it will redirect them to the selected profiles page
+| &check; | Users can click the unlike button on a post
+| &check; | Users can click the comment button on a post and it will redirect them to the post detail page
+
+| Status | **Contact Us Page - User Logged In**
+|:-------:|:--------|
+| &check; | Users can view the empty forum
+| &check; | Users can't submit the forum without a name
+| &check; | Users can't submit the forum without a last name
+| &check; | Users can't submit the forum without a email
+| &check; | Users can't submit the forum without a subject
+| &check; | Users can't submit the forum without a message
+| &check; | Users can click the submit button and it will redirect them to the contact us confirmation page
 
 
 ### Backend
