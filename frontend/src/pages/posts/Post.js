@@ -1,6 +1,6 @@
 // React imports
 import React from "react";
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useHistory } from "react-router-dom";
 // Axios imports
 import { axiosRes } from "../../api/axiosDefaults";
 // Bootstrap imports

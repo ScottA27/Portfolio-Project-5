@@ -1,6 +1,6 @@
 // React imports
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 // Axios imports
 import { axiosReq } from "../../api/axiosDefaults";
 // Bootstrap imports
@@ -14,6 +14,8 @@ import appStyles from "../../App.module.css";
 
 // ContactForm allows users to contact the website owner
 const ContactForm = () => {
+  useRedirect("loggedOut");
+
   const [contactData, setContactData] = useState({
     name: "",
     last_name: "",

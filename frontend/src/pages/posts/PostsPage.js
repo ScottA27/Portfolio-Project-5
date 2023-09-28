@@ -1,6 +1,6 @@
 // React imports
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { useLocation } from "react-router-dom";
 // Axios imports
 import { axiosReq } from "../../api/axiosDefaults";
 // Bootstrap imports

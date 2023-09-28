@@ -1,6 +1,6 @@
 // React imports
 import React, { useState } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 // Axios imports
 import { axiosRes } from "../../api/axiosDefaults";
 // Bootstrap imports

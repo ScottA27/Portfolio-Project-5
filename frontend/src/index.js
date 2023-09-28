@@ -1,6 +1,6 @@
 // React imports
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom/cjs/react-router-dom.min";
+import { BrowserRouter as Router } from "react-router-dom";
 import ReactDOM from "react-dom";
 // Component imports
 import App from "./App";

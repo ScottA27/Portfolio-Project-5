@@ -1,6 +1,6 @@
 // React imports
 import React from "react";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink } from "react-router-dom";
 // Axios imports
 import axios from "axios";
 // Bootstrap imports
