@@ -120,7 +120,7 @@ const Post = (props) => {
           {is_owner ? (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't like your own post!</Tooltip>}
+              overlay={<Tooltip>You can&apos;t like your own post!</Tooltip>}
             >
               <i className="far fa-heart" />
             </OverlayTrigger>
@@ -148,7 +148,7 @@ const Post = (props) => {
         </div>
         <div className="mt-3 d-flex align-items-center justify-content-end">
           <span className={styles.smallText}>
-            Posted From {team}'s stadium {stadium} in {location}
+            Posted From {team}&apos;s stadium {stadium} in {location}
           </span>
         </div>
       </Card.Body>

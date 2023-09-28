@@ -335,6 +335,12 @@ There were no errors found when the project URL was passed into the validator.
 
 ![W3C CSS Validation](/images/pp5-w3cValidation.png)
 
+#### ESLint Validator
+
+When I initilly installed ESLint 12 errors were being passed, most to do with escaped entities. I swapped out all of the apostrophes with "&apos;" to get rid of these errors. I managed to get the errors down to just 3. All 3 errors are to do with the Infinite Scroll component. It seems that the linter doesn't recognise the component and doesn't know what to do with it. The remaining errors are shown below:
+
+![ESLint Validation](/images/pp5-eslint.png)
+
 ### Backend
 
 #### PEP8

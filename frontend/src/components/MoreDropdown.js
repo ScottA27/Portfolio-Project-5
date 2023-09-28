@@ -15,6 +15,7 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
     }}
   />
 ));
+ThreeDots.displayName = "ThreeDots";
 
 // Edit and Delete dropdown for posts and comments
 export const MoreDropdown = ({ handleEdit, handleDelete }) => {
