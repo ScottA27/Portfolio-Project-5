@@ -94,7 +94,7 @@ function SignInForm() {
             </Form.Group>
             {errors.password?.map((message, idx) => (
               <Alert
-                className={alertStyles.AlertGreen}
+                className={`${alertStyles.AlertGreen} ${alertStyles.SignInAlert}`}
                 key={idx}
                 variant="warning"
               >
@@ -111,7 +111,7 @@ function SignInForm() {
               <Alert
                 key={idx}
                 variant="warning"
-                className={alertStyles.AlertGreen}
+                className={`${alertStyles.AlertGreen} ${alertStyles.SignInAlert}`}
               >
                 {message}
               </Alert>
