@@ -249,17 +249,17 @@ From the database schema above I made my models for the backend of the project w
 
 There are several components created so they could be used throughout the project without repeating code. These are documented below:
 
-* Asset.js - used to render the loading spinner shown throughout the project.
-* Avatar.js - used to display users avatars.
-* MoreDropdown.js - used to render a dropdown menu with edit and delete buttons. Also used to render a dropdown menu with the edit profile, change username and change password buttons.
-* NavBar.js - used to render the navbar at the top of every page.
-* NotFound.js - used to render a message to the user that the page they're trying to access doesn't exist.
+* Asset.js - Used to render the loading spinner shown throughout the project when posts and comments are loading.
+* Avatar.js - Used to display users avatars. This is used in posts, comments, profiles, popular users. 
+* MoreDropdown.js - Used to render a dropdown menu with edit and delete buttons. Also used to render a dropdown menu with the edit profile, change username and change password buttons.
+* NavBar.js - Used to render the navbar at the top of every page.
+* NotFound.js - Used to render a message to the user that the page they're trying to access doesn't exist.
 
 ## Technologies Used
 
 ### Languages
 
-* [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website
+* [JSX](https://en.wikipedia.org/wiki/JSX_(JavaScript)) - Provides the content and structure for the website
 * [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
 * [React.js](https://en.wikipedia.org/wiki/React_(software)) - Provides the base for the frontend components
@@ -292,28 +292,28 @@ There are several components created so they could be used throughout the projec
 
 The libraries used to create this project are documented below:
 
-* [asgiref](https://pypi.org/project/asgiref/)
-* [cloudinary](https://pypi.org/project/cloudinary/)
-* [dj-database-url](https://pypi.org/project/dj-database-url/0.5.0/)
-* [dj-rest-auth](https://pypi.org/project/dj-rest-auth/)
-* [Django](https://pypi.org/project/Django/)
-* [django-allauth](https://pypi.org/project/django-allauth/)
-* [django-cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/)
-* [django-cors-headers](https://pypi.org/project/django-cors-headers/)
-* [django-filter](https://pypi.org/project/django-filter/)
-* [django-taggit](https://pypi.org/project/django-taggit/)
-* [djangorestframework](https://pypi.org/project/djangorestframework/)
-* [djangorestframework-simplejwt](https://pypi.org/project/djangorestframework-simplejwt/)
-* [gunicorn](https://pypi.org/project/gunicorn/)
-* [oauthlib](https://pypi.org/project/oauthlib/)
-* [Pillow](https://pypi.org/project/Pillow/8.2.0/)
-* [psycopg2](https://pypi.org/project/psycopg2/)
-* [PyJWT](https://pypi.org/project/PyJWT/)
-* [python3-openid](https://pypi.org/project/python3-openid/)
-* [requests-oauthlib](https://pypi.org/project/requests-oauthlib/)
-* [sqlparse](https://pypi.org/project/sqlparse/)
-* [urllib3](https://pypi.org/project/urllib3/)
-* [whitenoise](https://pypi.org/project/whitenoise/)
+* [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI.
+* [cloudinary](https://pypi.org/project/cloudinary/) - The Cloudinary Python SDK allows you to quickly and easily integrate your application with Cloudinary. Effortlessly optimize, transform, upload and manage your cloud's assets.
+* [dj-database-url](https://pypi.org/project/dj-database-url/0.5.0/) - This simple Django utility allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
+* [dj-rest-auth](https://pypi.org/project/dj-rest-auth/) - Drop-in API endpoints for handling authentication securely in Django Rest Framework. Works especially well with SPAs (e.g., React, Vue, Angular), and Mobile applications.
+* [Django](https://pypi.org/project/Django/) - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+* [django-allauth](https://pypi.org/project/django-allauth/) - Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
+* [django-cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/) - Django Cloudinary Storage is a Django package that facilitates integration with Cloudinary by implementing Django Storage API.
+* [django-cors-headers](https://pypi.org/project/django-cors-headers/) - A Django App that adds Cross-Origin Resource Sharing (CORS) headers to responses. This allows in-browser requests to your Django application from other origins.
+* [django-filter](https://pypi.org/project/django-filter/) - Django-filter is a reusable Django application allowing users to declaratively add dynamic QuerySet filtering from URL parameters.
+* [django-taggit](https://pypi.org/project/django-taggit/) - django-taggit a simpler approach to tagging with Django.
+* [djangorestframework](https://pypi.org/project/djangorestframework/) - Django REST framework is a powerful and flexible toolkit for building Web APIs.
+* [djangorestframework-simplejwt](https://pypi.org/project/djangorestframework-simplejwt/) - Simple JWT is a JSON Web Token authentication plugin for the Django REST Framework.
+* [gunicorn](https://pypi.org/project/gunicorn/) - Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. It’s a pre-fork worker model ported from Ruby’s Unicorn project. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resource usage, and fairly speedy.
+* [oauthlib](https://pypi.org/project/oauthlib/) - OAuthLib is a framework which implements the logic of OAuth1 or OAuth2 without assuming a specific HTTP request object or web framework
+* [Pillow](https://pypi.org/project/Pillow/8.2.0/) - The Python Imaging Library adds image processing capabilities to your Python interpreter.
+* [psycopg2](https://pypi.org/project/psycopg2/) - Psycopg is the most popular PostgreSQL database adapter for the Python programming language. Its main features are the complete implementation of the Python DB API 2.0 specification and the thread safety (several threads can share the same connection).
+* [PyJWT](https://pypi.org/project/PyJWT/) - JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties.
+* [python3-openid](https://pypi.org/project/python3-openid/) - This is a set of Python packages to support use of the OpenID decentralized identity system.
+* [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - This project provides first-class OAuth library support for Requests.
+* [sqlparse](https://pypi.org/project/sqlparse/) - sqlparse is a non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+* [urllib3](https://pypi.org/project/urllib3/) - urllib3 is a powerful, user-friendly HTTP client for Python.
+* [whitenoise](https://pypi.org/project/whitenoise/) - With a couple of lines of config WhiteNoise allows your web app to serve its own static files, making it a self-contained unit that can be deployed anywhere without relying on nginx, Amazon S3 or any other external service.
 
 # **Testing**
 
