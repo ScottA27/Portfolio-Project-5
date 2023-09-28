@@ -1,8 +1,8 @@
-# Title Place Holder
+# Pitch Perspective
 
-{TITLE} is a community for football fans around the world. It allows people from all over to come together and share their experiences with different stadiums across the globe. The page has a social network style, that encourages users to share opinions and interact with others on the platform. It was developed to give the football fan a place to go for opinions on stadiums, atmosphere and to find the best places to go spectate the beautiful game.
+Pitch Perspective is a community for football fans around the world. It allows people from all over to come together and share their experiences with different stadiums across the globe. The page has a social network style, that encourages users to share opinions and interact with others on the platform. It was developed to give the football fan a place to go for opinions on stadiums, atmosphere and to find the best places to go spectate the beautiful game.
 
-This sit was created for Portfolio Project #5 (Advanced Front End) - Diploma in Full Stack Software Development at the [Code Institute](https://www.codeinstitute.net).
+This site was created for Portfolio Project #5 (Advanced Front End) - Diploma in Full Stack Software Development at the [Code Institute](https://www.codeinstitute.net).
 
 #### [View live website here](https://portfolio-project-5-sa-0f66607dde4e.herokuapp.com/)
 
@@ -68,7 +68,7 @@ The users seeking recommendations are able to cycle through posts on the site wi
 - [User Stories](https://github.com/ScottA27/Portfolio-Project-5/issues)
 - [Project Board](https://github.com/users/ScottA27/projects/10)
 
-Throughout my project I have utilised GitHub's issues to make my user stories and projects to make my kanban board. When I was initially creating the project I made all of the user stories to divide my work into smaller tasks. I then made labels for to go onto the user stories: must have, should have and could have. The labels were then given to the user stories the applied to.
+Throughout my project I have utilised GitHub's issues to make my user stories and projects to make my kanban board. When I was initially creating the project I made all of the user stories to divide my work into smaller tasks. I then made labels for to go onto the user stories: must have, should have and could have. The labels were then given to the user stories the applied to. The project was also broken down into sprints and these are documented using the milestone feature.
 
 All of the user stories were then placed onto my kanban board. The kanban board is broken into three sections: todo, in progress and done. Whenever I started a user story I would go onto the kanban board and move it to in progress, once it was completed I'd move it to done. This gave me a simple way to break down my project workflow and allowed me to focus on one thing at a time.
 
@@ -99,7 +99,7 @@ I created wireframes for my project using the software [Balsamiq](https://balsam
 
 ### Colour Scheme 
 
-When I was designing my project I always wanted to keep things simple. I decided that the best way to do this was to have colours based on a football pitch, which is green and white. I thought dark greens throughout the project, implemented in buttons and nav links, where the best way to use the colour. There is also a slight grey background colour on the page. The alerts throughout the website are a lighter shade of green, pairing well with the lighter shades already on the page. The signup and signin pages also have orange implemented as it goes well with the green and white. Overall the colour palette is fairly simple but all the colours go together and very complimentary.
+When I was designing my project I always wanted to keep things simple. I decided that the best way to do this was to have colours based on a football pitch, which is green and white. I thought dark greens throughout the project, implemented in buttons and nav links, where the best way to use the colour. There is also a slight grey background colour on the page. The alerts throughout the website are a lighter shade of green, pairing well with the lighter shades already on the page. The signup and signin pages also have orange implemented as it goes well with the green and white. Overall the colour palette is fairly simple but all the colours go together and are very complimentary.
 
 ![Colour Palette](/images/Colour-Palette.png)
 
@@ -225,6 +225,17 @@ From the database schema above I made my models for the backend of the project w
 
 ***
 
+- #### **Contact Us Page**
+  - This is the contact us page, this allows logged in users to get in contact with the creator of the page.
+
+<details>
+    <summary>Click to View Contact Us Page</summary>
+
+  ![Sign In Page](/images/pp5-contactus.png)
+</details>
+
+***
+
 - #### **Change Username Page**
   - This is the change username page, which allows logged in users to change their own username.
 <details>
@@ -337,7 +348,7 @@ There were no errors found when the project URL was passed into the validator.
 
 #### ESLint Validator
 
-When I initilly installed ESLint 12 errors were being passed, most to do with escaped entities. I swapped out all of the apostrophes with "&apos;" to get rid of these errors. I managed to get the errors down to just 3. All 3 errors are to do with the Infinite Scroll component. It seems that the linter doesn't recognise the component and doesn't know what to do with it. The remaining errors are shown below:
+When I initilly installed ESLint 12 errors were being passed, most to do with escaped entities. I swapped out all of the apostrophes with "`&apos;`" to get rid of these errors. I managed to get the errors down to just 3. All 3 errors are to do with the Infinite Scroll component. It seems that the linter doesn't recognise the component and doesn't know what to do with it. The remaining errors are shown below:
 
 ![ESLint Validation](/images/pp5-eslint.png)
 
@@ -618,9 +629,10 @@ I used Chrome Developer Tools Lighthouse to test the applications Performance, A
 
 ## Resolved Bugs
 
-- Links to sign in and sign up not working for logged out users when on any page other than the home page e.g post page, profile page - This problem was only happening in the deployed version of the project and not the local version. This was solved by changing my version of react router dom to the same version as Code Institute's moments walkthrough. I was using a different version so I tried changing it to the same one but it still didn't work. After that I tried to implement the access refresh tokens back into my project to see if that would fix the problem. That didn't seem to work until I updated my staticfiles by running the command "npm run build && rm -rf ../staticfiles/build && mv build ../staticfiles/.". I checked the deployed code once more and this fixed the issue I was having.
+- Cannot read properties of undefined (username) - This error was being thrown when a user tried to login. It would log the user in once the page was refreshed. After struggling to find the reason why this was happening I realised I had added in access refresh tokens to my pages. When I commented them out of the pages the error suddenly went away so I knew this was the source of the problem. I tried to follow the walkthrough guide again on how to add the tokens into the project several times and it seems I was doing everything the exact same. I reached out to my fellow students on slack but couldn't get help there either. I came to the conclusion that it was better to take out the access refresh tokens from all my pages as it was working perfect before, so that's how I resolved it. My theory on why this wasn't working as expected is that I possibly have different versions of packages in my project to the walkthrough project and this is causing some sort of break in the code. The access refresh tokens were later added back into the project.
 
-- Cannot read properties of undefined (username) - This error was being thrown when a user tried to login. It would log the user in on refresh but everytime this error message would pop up. After struggling to find the reason why this was happening I realised I had added in access refresh tokens to my pages. When I commented them out of the pages the error suddenly went away so I knew this was the source of the problem. I tried to follow the walkthrough guide again on how to add the tokens into the project several times and it seems I was doing everything the exact same. I reached out to my fellow students on slack but couldn't get help there either. I came to the conclusion that it was better to take out the access refresh tokens from all my pages as it was working perfect before, so that's how I resolved it. My theory on why this wasn't working as expected is that I possibly have different versions of packages in my project to the walkthrough project and this is causing some sort of break in the code.
+- Links to sign in and sign up not working for logged out users when on any page other than the home page e.g post page, profile page - This problem was only happening in the deployed version of the project and not the local version. This was solved by changing my version of react router dom to the same version as Code Institute's moments walkthrough. This didn't fix it straight away. After that I tried to implement the access refresh tokens back into my project to see if that would fix the problem. That didn't seem to work until I updated my staticfiles by running the command "npm run build && rm -rf ../staticfiles/build && mv build ../staticfiles/.". I checked the deployed code once more and this fixed the issue I was having.
+
 
 ## Unresolved Bugs
 
@@ -671,3 +683,10 @@ The steps taken to deploy this project to Heroku are documented below:
 * Once Heroku is finished building the app you will see a 'Build Succeeded' message. Click 'Open app' to open your application in the browser.
 
 # **Credits**
+
+* Code Institute - I used the CI's moments walkthrough to guide me throughout my project.
+* [Freepik](https://www.freepik.com/) - Was used for the logo of the project.
+* [Frontend Masters](https://frontendmasters.com/) - Was used to set up ESLint.
+* [Lauren-Nicole](https://github.com/CluelessBiker) - Helped guide me throughout the entire project.
+* The Code Institute slack community helped whenever I needed assistance.
+* The Code Institute's tutors who helped me troubleshoot the problems I encountered.
