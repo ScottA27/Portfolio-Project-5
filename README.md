@@ -404,7 +404,51 @@ Here are all of the manual tests I carried out for both frontend and backend:
 
 | Status | **Authentication - User Logged Out**
 |:-------:|:--------|
-| &check; | 
+| &check; | Typing 'https://portfolio-project-5-sa-0f66607dde4e.herokuapp.com/feed' url into the browser, the user can not access the feed page. User is redirected Home
+| &check; | Typing 'https://portfolio-project-5-sa-0f66607dde4e.herokuapp.com/liked' url into the browser, the user can not access the feed page. User is redirected Home
+| &check; | Typing 'https://portfolio-project-5-sa-0f66607dde4e.herokuapp.com/posts/create' url into the browser, the user can not access the feed page. User is redirected Home
+| &check; | Typing 'https://portfolio-project-5-sa-0f66607dde4e.herokuapp.com/posts/{id}/edit' url into the browser, the user can not access the feed page. User is redirected Home
+| &check; | Typing 'https://portfolio-project-5-sa-0f66607dde4e.herokuapp.com/profiles/{id}/edit' url into the browser, the user can not access the feed page. User is redirected Home
+| &check; | Typing 'https://portfolio-project-5-sa-0f66607dde4e.herokuapp.com/profiles/{id}/edit/username' url into the browser, the user can not access the feed page. User is redirected Home
+| &check; | Typing 'https://portfolio-project-5-sa-0f66607dde4e.herokuapp.com/profiles/{id}/edit/password' url into the browser, the user can not access the feed page. User is redirected Home
+| &check; | Typing 'https://portfolio-project-5-sa-0f66607dde4e.herokuapp.com/contactus' url into the browser, the user can not access the feed page. User is redirected Home
+| &check; | Users can't sign in with the wrong credentials
+| &check; | Users can't sign in with fields left blank
+| &check; | Users can't sign up with a username that already exists
+| &check; | Users can't sign up with fields left blank
+| &check; | Users can't sign up with the two password fields not matching
+
+
+| Status | **Navigation - User Logged Out**
+|:-------:|:--------|
+| &check; | Clicking the navbar website logo loads the home page
+| &check; | Clicking the sign in button in the navbar loads the sign in page
+| &check; | Clicking the sign up button in the navbar loads the sign up page
+| &check; | Users can't see the 'logged-in' features in the navbar
+
+| Status | **Homepage - User Logged Out**
+|:-------:|:--------|
+| &check; | Users can view the most followed profiles
+| &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
+| &check; | Users can't see follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can use the search bar to find posts by searching the posts: title, tags, team, stadium, country and the username of the post creator
+| &check; | Users can view all posts
+| &check; | Users can view all post details in the post list: username, date, title, content, tags, likes, comments, team, stadium and country
+| &check; | Users can click the post creators profile and it will redirect them to the selected profiles page
+| &check; | Users can't click the like button on a post, it prompts the user to login
+| &check; | Users can click the comment button and it will redirect them to the post detail page
+
+| Status | **Post Detail Page - User Logged Out**
+|:-------:|:--------|
+| &check; | Users can view the most followed profiles
+| &check; | Users can click on a profile in the most followed profiles and it will redirect the selected profiles page
+| &check; | Users can't see follow/unfollow buttons next to profiles in most followed profiles
+| &check; | Users can view all post details: username, date, title, content, tags, likes, comments, team, stadium and country
+| &check; | Users can click the post creators profile and it will redirect them to the selected profiles page
+| &check; | Users can't click the like button on a post, it prompts the user to login
+| &check; | Users can view the comment list
+| &check; | Users can't see the create comment form
+
 
 ### Backend
 

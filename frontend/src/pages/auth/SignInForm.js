@@ -109,7 +109,7 @@ function SignInForm() {
               <Alert
                 key={idx}
                 variant="warning"
-                className={[alertStyles.AlertGreen, styles.SignInAlert]}
+                className={alertStyles.AlertGreen}
               >
                 {message}
               </Alert>
