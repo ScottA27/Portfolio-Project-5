@@ -80,7 +80,7 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/signin"
-        end
+        exact
       >
         <i className="fas fa-sign-in-alt"></i>Sign in
       </NavLink>
@@ -88,7 +88,7 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/signup"
-        end
+        exact
       >
         <i className="fas fa-user-plus"></i>Sign up
       </NavLink>
