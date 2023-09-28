@@ -158,10 +158,9 @@ const ContactForm = () => {
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
               <Alert
-                className={alertStyles.AlertGreen}
+                className={`mt-3 ${alertStyles.AlertGreen}`}
                 key={idx}
                 variant="warning"
-                className="mt-3"
               >
                 {message}
               </Alert>
