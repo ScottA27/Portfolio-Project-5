@@ -1,6 +1,6 @@
 // React imports
 import React from "react";
-import { Link, NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 // Axios imports
 import axios from "axios";
 // Bootstrap imports
@@ -79,16 +79,16 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        as={Link}
         to="/signin"
+        end
       >
         <i className="fas fa-sign-in-alt"></i>Sign in
       </NavLink>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        as={Link}
         to="/signup"
+        end
       >
         <i className="fas fa-user-plus"></i>Sign up
       </NavLink>
