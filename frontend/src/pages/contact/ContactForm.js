@@ -38,12 +38,12 @@ const ContactForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // console.log(contactData);
+    // // console.log(contactData);
     try {
       await axiosReq.post("/contact/", contactData);
       history.push("/confirmation");
     } catch (err) {
-      console.log("ERROR in submit: ", err);
+      // console.log("ERROR in submit: ", err);
       setErrors(err.response?.data);
     }
   };
