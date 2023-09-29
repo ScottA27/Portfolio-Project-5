@@ -21,18 +21,21 @@ This site was created for Portfolio Project #5 (Advanced Front End) - Diploma in
 
 - [Database Schema](<#database-schema>)
 
-- [Existing Features](#features)
-  - [Frontend](#frontend)
-    * [Navigation](#navigation)
-    * [Authentication](#authentication)
-    * [Homepage](#homepage)
-    * [Feed](#feed)
-    * [Posts](#posts)
-    * [Create a Post](#create-a-post)
-    * [Post Detail Page](#Post-detail-page)
-    * [Profile Page](#profile-page)
-    * [Contact Us](#contact)
-    * [Reusable React Components](#reusable-react-components)
+- [Existing Features](<#existing-features>)
+  * [Home Page](<#home-page-1>)
+  * [Profile Page](<#profile-page-1>)
+  * [Create Post Page](<#create-post-page>)
+  * [Post](<#post-page>)
+  * [Edit Post Page](<#edit-post-page>)
+  * [Comment Section](<#comment-section>)
+  * [Edit Profile Page](<#edit-profile-page>)
+  * [Sign Up Page](<#sign-up-page>)
+  * [Sign In Page](<#sign-in-page>)
+  * [Contact Us Page](<#contact-us-page>)
+  * [Change Username Page](<#change-username-page>)
+  * [Change Password Page](<#change-password-page>)
+  * [Components](<#components>)
+
 
 - [Technologies Used](<#technologies-used>)
   * [Languages](<#languages>)
@@ -123,8 +126,6 @@ From the database schema above I made my models for the backend of the project w
 * Contact - allows users to contact the site owner
 
 # **Existing Features**
-
-## Frontend
 
 - #### **Home Page**
   - This is the home page, all users logged in or not see this page and get to scroll through posts.
@@ -266,9 +267,9 @@ There are several components created so they could be used throughout the projec
 * NavBar.js - Used to render the navbar at the top of every page.
 * NotFound.js - Used to render a message to the user that the page they're trying to access doesn't exist.
 
-## Technologies Used
+# Technologies Used
 
-### Languages
+## Languages
 
 * [JSX](https://en.wikipedia.org/wiki/JSX_(JavaScript)) - Provides the content and structure for the website
 * [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website
@@ -276,9 +277,9 @@ There are several components created so they could be used throughout the projec
 * [React.js](https://en.wikipedia.org/wiki/React_(software)) - Provides the base for the frontend components
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the DRF backend framework
 
-### Frameworks & Software
+## Frameworks & Software
 
-#### Frontend
+### Frontend
 
 * [React Bootstrap](https://react-bootstrap.github.io/) - A CSS framework that helps build responsive sites
 * [Balsamiq](https://balsamiq.com/) - Used to create wireframes
@@ -292,14 +293,14 @@ There are several components created so they could be used throughout the projec
 * [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
 * [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
 
-#### Backend
+### Backend
 
 * [Django Rest Framework](https://www.django-rest-framework.org/) - A framework for building web API's
 * [PEP8 Validation](https://pypi.org/project/pep8/) - pep8 is a tool to check your Python code
 * [Heroku](https://en.wikipedia.org/wiki/Heroku) - Used to deploy the live project
 * [Cloudinary](https://cloudinary.com/) - A service that hosts image files in the project
 
-### Libraries
+## Libraries
 
 The libraries used to create this project are documented below:
 
