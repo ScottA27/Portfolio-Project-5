@@ -53,7 +53,7 @@ This site was created for Portfolio Project #5 (Advanced Front End) - Diploma in
 
 ## Objective
 
-The objective of this project is to allow footballing fans from all walks of life to come together and to be able to share their memories of the sport with others. The website allows users to create, read, update, delete both posts and comments. The posts on the website are in order from newest at the top to oldest at the bottom, with users also able to filter content using the search bar or the feed and liked pages respectively. Users are also able to follow each other and like other users posts.
+The objective of this project is to allow footballing fans from all walks of life to come together and to be able to share their memories of the sport with others. The website allows users to create, read, update, delete both posts and comments upon creating an account. The posts on the website are in order from newest at the top to oldest at the bottom, with users also able to filter content using the search bar or the feed and liked pages respectively. Users are also able to follow each other and like other users posts.
 
 ## Site User's Goal
 
@@ -288,9 +288,9 @@ There are several components created so they could be used throughout the projec
 * [AmIResponsive](https://ui.dev/amiresponsive) - Used for responsiveness check across devices
 * [Favicon](https://favicon.io/) - Used to create the favicon
 * [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to debug and test responsiveness
+* [JSX Validation](https://eslint.org/) - ESLint was installed into the project to validate the JSX code
 * [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
 * [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
-* [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code
 
 #### Backend
 
@@ -620,6 +620,40 @@ Here are all of the manual tests I carried out for both frontend and backend:
 
 
 ### Backend
+
+| Status | **Profiles**
+|:-------:|:--------|
+| &check; | Profile List can be ordered by posts_count in ascending order
+| &check; | Profile List can be ordered by posts_count in descending order
+| &check; | Profile List can be ordered by followers_count in ascending order
+| &check; | Profile List can be ordered by followers_count in descending order
+| &check; | Profile List can be ordered by following_count in ascending order
+| &check; | Profile List can be ordered by following_count in descending order
+| &check; | Profile List can be ordered by owner__following__created_at in ascending order
+| &check; | Profile List can be ordered by owner__following__created_at in descending order
+| &check; | Profile List can be ordered by owner__followed__created_at in ascending order
+| &check; | Profile List can be ordered by owner__followed__created_at in descending order
+| &check; | Profile List can be filtered by owner__following__followed__profile
+| &check; | Profile List can be filtered by owner__followed__owner__profile
+
+| Status | **Posts**
+|:-------:|:--------|
+| &check; | Post List can be ordered by likes_count in ascending order
+| &check; | Post List can be ordered by likes_count in descending order
+| &check; | Post List can be ordered by comments_count in ascending order
+| &check; | Post List can be ordered by comments_count in descending order
+| &check; | Post List can be ordered by likes__created_at in ascending order
+| &check; | Post List can be ordered by likes__created_at in descending order
+| &check; | Post List can be filtered by owner__following__followed__profile
+| &check; | Post List can be filtered by likes__owner__profile
+| &check; | Post List can be filtered by owner__profile
+| &check; | Post List can be searched by owner__username
+| &check; | Post List can be searched by title
+| &check; | Post List can be searched by tags__name
+| &check; | Post List can be searched by team
+| &check; | Post List can be searched by stadium
+| &check; | Post List can be searched by location
+
 
 ## Lighthouse
 
